@@ -1,5 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 using System.Threading;
 using System.Threading.Tasks;
 using EBasket.Application.Core;
@@ -9,26 +8,22 @@ using Microsoft.AspNetCore.Mvc;
 
 namespace EBasket.WebApi.Controllers
 {
-
     [Route("api/[controller]")]
     [ApiController]
     public class OrdersController : ControllerBase
     {
-        private readonly IRequestHandler<GetLatestDeliveredOrdersByCustomerQuery, IEnumerable<Order>> _requestHandler;
+        private readonly IRequestHandler<GetOrdersQuery, IEnumerable<Order>> _requestHandler;
 
-        public OrdersController(IRequestHandler<GetLatestDeliveredOrdersByCustomerQuery, IEnumerable<Order>> requestHandler)
+        public OrdersController(IRequestHandler<GetOrdersQuery, IEnumerable<Order>> requestHandler)
         {
             _requestHandler = requestHandler;
         }
-        // GET api/orders?customerId={customerId}
+
+        // GET api/orders
         [HttpGet]
-        public async Task<ActionResult<IEnumerable<Order>>> Get([FromQuery]string customerId)
+        public async Task<ActionResult<IEnumerable<Order>>> Get()
         {
-            var result = await _requestHandler.HandleAsync(new GetLatestDeliveredOrdersByCustomerQuery
-                {
-                    CustomerId = Guid.Parse(customerId)
-                },
-                CancellationToken.None);
+            var result = await _requestHandler.HandleAsync(new GetOrdersQuery(), CancellationToken.None);
 
             return Ok(result);
         }
