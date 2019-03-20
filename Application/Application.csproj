@@ -1,0 +1,9 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+    <PropertyGroup>
+        <TargetFramework>netcoreapp2.2</TargetFramework>
+        <AssemblyName>EBasket.Application</AssemblyName>
+        <RootNamespace>EBasket.Application</RootNamespace>
+    </PropertyGroup>
+
+</Project>
