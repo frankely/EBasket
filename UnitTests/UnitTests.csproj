@@ -1,7 +1,6 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk">
 
     <PropertyGroup>
-        <TargetFramework>netcoreapp2.2</TargetFramework>
 
         <IsPackable>false</IsPackable>
 
@@ -10,6 +9,8 @@
         <RootNamespace>EBasket.UnitTests</RootNamespace>
 
         <OutputType>Library</OutputType>
+
+        <TargetFrameworks>netcoreapp2.1;netcoreapp2.2</TargetFrameworks>
     </PropertyGroup>
 
     <ItemGroup>
