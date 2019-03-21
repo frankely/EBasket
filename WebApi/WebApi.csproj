@@ -1,17 +1,15 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk.Web">
 
     <PropertyGroup>
-        <TargetFramework>netcoreapp2.2</TargetFramework>
         <UserSecretsId>aspnet-WebApi-3017E47A-52C8-4B81-9EC0-ABEFB8E4D237</UserSecretsId>
         <AspNetCoreHostingModel>InProcess</AspNetCoreHostingModel>
         <AssemblyName>EBasket.WebApi</AssemblyName>
         <RootNamespace>EBasket.WebApi</RootNamespace>
+        <TargetFramework>netcoreapp2.1</TargetFramework>
     </PropertyGroup>
 
     <ItemGroup>
         <PackageReference Include="Microsoft.AspNetCore.App" />
-        <PackageReference Include="Microsoft.AspNetCore.Authentication.AzureADB2C.UI" Version="2.2.0" />
-        <PackageReference Include="Microsoft.AspNetCore.Razor.Design" Version="2.2.0" PrivateAssets="All" />
     </ItemGroup>
 
     <ItemGroup>
