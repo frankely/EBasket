@@ -3,7 +3,7 @@
     <PropertyGroup>
         <AssemblyName>EBasket.Infrastructure</AssemblyName>
         <RootNamespace>EBasket.Infrastructure</RootNamespace>
-        <TargetFrameworks>netcoreapp2.1;netcoreapp2.2</TargetFrameworks>
+        <TargetFramework>netcoreapp2.1</TargetFramework>
     </PropertyGroup>
 
 </Project>
