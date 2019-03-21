@@ -1,11 +1,11 @@
-# EBasket ![](https://travis-ci.org/frankely/EBasket.svg?branch=dev)
+# EBasket ![](https://travis-ci.org/frankely/EBasket.svg?branch=master)
 .NET Core Project built using clean architecture, domain driven design and test driven development.
 
 
 
 ## Testing
 
-The following project follows Test Driven Development and relies on xUnit, AutoFixture and Moq.
+The following project follows Test Driven Development and relies on xUnit and AutoFixture.
 
 ### What is TDD?
 
@@ -159,8 +159,3 @@ public void Given_Item_Is_Added_To_Cart_It_Should_Be_Added_To_Items(Item item/* 
 ```
 
 *AutoFixture and AutoFixture.xUnit2 NugGet packages must be installed*
-
-### Adding Moq
-
-Work In Progress
-
