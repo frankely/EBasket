@@ -9,8 +9,9 @@ namespace EBasket.WebApi.Controllers
     [ApiController]
     public class OrdersController : ControllerBase
     {
+        
         [HttpGet]
-        public IEnumerable<Order> GetOrders([FromQuery][Required]DateTime since)
+        public IEnumerable<Order> GetOrders([FromQuery][Required]DateTime since, string status)
         {
             return new List<Order>();
         }
