@@ -8,7 +8,14 @@ namespace EBasket.Domain
 
         public CustomerId(string customerId)
         {
-            
+            if (Guid.TryParse(customerId, out var outCustomerId))
+            {
+                Value = outCustomerId;
+            }
+            else
+            {
+                throw new ArgumentException($"{customerId} is not a valid {nameof(CustomerId)} value");
+            }
         }
     }
 }

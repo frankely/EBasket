@@ -1,5 +1,4 @@
 using System;
-using System.Collections.Generic;
 
 namespace EBasket.Domain
 {
@@ -8,14 +7,14 @@ namespace EBasket.Domain
         public DateTimeOffset DatePlaced { get; private set;  }
         public Guid OrderId { get; private set; }
         public OrderStatus Status { get; private set; }
-        public string CustomerId { get; private set; }
+        public CustomerId CustomerId { get; private set; }
 
         private Order()
         {
             
         }
 
-        public static Order Place(string customerId)
+        public static Order Place(CustomerId customerId)
         {
             return new Order
             {
