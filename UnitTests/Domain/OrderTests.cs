@@ -9,7 +9,7 @@ namespace EBasket.UnitTests.Domain
     {
         [Theory]
         [AutoData]
-        public void Given_A_Order_Is_Placed_Then_Its_Status_Should_Be_Placed(string customerId)
+        public void Given_An_Order_Is_Placed_Then_Its_Status_Should_Be_Placed(string customerId)
         {
             var sut = Order.Place(customerId);
             
@@ -18,11 +18,20 @@ namespace EBasket.UnitTests.Domain
 
         [Theory]
         [AutoData]
-        public void Given_A_Order_Is_Placed_It_Should_Have_An_Order_Id(string customerId)
+        public void Given_An_Order_Is_Placed_It_Should_Have_An_Order_Id(string customerId)
         {
             var sut = Order.Place(customerId);
             
-            //Assert.NotEqual(Guid.Empty,sut.OrderId);
+            Assert.NotEqual(Guid.Empty,sut.OrderId);
+        }
+
+        [Theory]
+        [AutoData]
+        public void Given_An_Order_Is_Placed_Customer_Ids_Should_Match(string expectedCustomerId)
+        {
+            var sut = Order.Place(expectedCustomerId);
+            
+            Assert.Equal(expectedCustomerId,sut.CustomerId);
         }
     }
 }
