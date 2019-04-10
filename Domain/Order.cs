@@ -15,7 +15,10 @@ namespace EBasket.Domain
 
         public static Order Place(string customerId)
         {
-            return null;
+            return new Order
+            {
+                Status = OrderStatus.Placed
+            };
         }
         
     }
