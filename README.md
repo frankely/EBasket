@@ -159,3 +159,21 @@ public void Given_Item_Is_Added_To_Cart_It_Should_Be_Added_To_Items(Item item/* 
 ```
 
 *AutoFixture and AutoFixture.xUnit2 NugGet packages must be installed*
+
+
+
+### Latest orders created by status
+
+As a **Customer** I want to be able to retrieve my latest orders by status so I can see what I order I have placed and in what status they are.
+
+**Acceptance Criteria**
+
+- Should return only last 90 days
+
+- If order **6498b0fd-01c4-40fa-8c28-c57439064fbc** is placed today when the process gets executed today then it should return the following results (assuming the current date is **04/09/19**)
+
+  | OrderId                              | Status | Date       |
+  | ------------------------------------ | ------ | ---------- |
+  | 6498b0fd-01c4-40fa-8c28-c57439064fbc | Placed | 04/09/2019 |
+
+- If order **63aaf294-945c-4642-bf94-27ee1567aede** was placed on 04/09/2018 then it should no be retrieved if the process is executed today (assuming the current date is **04/09/19**), the result should be empty.
