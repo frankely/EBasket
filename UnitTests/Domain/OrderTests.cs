@@ -11,7 +11,7 @@ namespace EBasket.UnitTests.Domain
             var customerId = "12346";
             var sut = Order.Place(customerId);
             
-            //Assert.Equal(OrderStatus.Placed, sut.Status);
+            Assert.Equal(OrderStatus.Placed, sut.Status);
         }
     }
 }
